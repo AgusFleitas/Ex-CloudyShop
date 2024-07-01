@@ -1,0 +1,90 @@
+---
+import ball from "../img/ball.webp";
+import gamepad from "../img/gamepad.webp";
+import handbag from "../img/handbag.webp";
+import makeup from "../img/makeup.webp";
+import shoe from "../img/shoe.webp";
+import tools from "../img/tools.webp";
+---
+
+<section>
+  <div class='grid-custom grid-cols-3 gap-4'>
+    <div class='-translate-x-2 -translate-y-2 -rotate-6'>
+      <img
+        class='hover:scale-110 transition-transform hover:rotate-3'
+        src={ball.src}
+        alt=''
+      />
+    </div>
+    <div class='-translate-y-8 rotate-[16deg] scale-110'>
+      <img
+        class='hover:scale-110 transition-transform hover:-rotate-3'
+        src={gamepad.src}
+        alt=''
+      />
+    </div>
+    <div class='scale-120 -translate-y-3 translate-x-4 -rotate-[24deg]'>
+      <img
+        class='hover:scale-110 transition-transform hover:rotate-3'
+        src={handbag.src}
+        alt=''
+      />
+    </div>
+    <h1 class='col-span-3 font-bold text-center text-9xl'>CloudyShop</h1>
+    <h2 class='col-span-3 font-semibold text-center text-2xl'>
+      Una tienda con productos hasta por las nubes
+    </h2>
+    <a
+      class='col-span-3 font-semibold inline-flex justify-self-center bg-pink-200 py-2 px-3 rounded-md hover:scale-110 transition-transform shadow-md'
+      href='#'>Exploremos el catálogo</a
+    >
+    <div class='-translate-x-5 -rotate-12 scale-110'>
+      <img
+        class='hover:scale-110 transition-transform hover:-rotate-3'
+        src={makeup.src}
+        alt=''
+      />
+    </div>
+    <div class='translate-x-4 translate-y-8 rotate-6 scale-125'>
+      <img
+        class='hover:scale-110 transition-transform hover:rotate-3'
+        src={shoe.src}
+        alt=''
+      />
+    </div>
+    <div class='translate-x-2 translate-y-4 scale-110 rotate-3'>
+      <img
+        class='hover:scale-110 transition-transform hover:-rotate-3'
+        src={tools.src}
+        alt=''
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid-custom {
+    display: grid;
+    grid-template-rows: auto;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .grid-custom div {
+    animation: floating 4s infinite ease-in-out alternate;
+  }
+
+  @keyframes floating {
+    to {
+        transform:initial
+    }
+  }
+</style>
