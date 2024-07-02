@@ -1,0 +1,31 @@
+---
+import BentoItem from "../components/BentoItem.astro";
+
+import gaming from "../img/gaming-icon.webp";
+import health from "../img/health-icon.webp";
+import house from "../img/house-icon.webp";
+import laptop from "../img/laptop-icon.webp";
+import makeup from "../img/makeup-icon.webp";
+import ring from "../img/ring-icon.webp";
+import shirt from "../img/shirt-icon.webp";
+import shoes from "../img/shoes-icon.webp";
+import toy from "../img/toy-icon.webp";
+---
+
+<section class="mb-24">
+  <h2 class='font-bold text-5xl text-center mb-2'>
+    Explora nuestras categorías
+  </h2>
+  <h3 class="font-regular text-lg text-center mb-8">Navega por cada una de las categorías en busca de eso que necesitas</h3>
+  <div class='grid grid-cols-3 mx-auto auto-rows-[4rem] gap-8 max-w-[750px]'>
+    <BentoItem categoryName='Juguetes' icon={toy.src} />
+    <BentoItem categoryName='Tecnología' icon={laptop.src} />
+    <BentoItem categoryName='Maquillaje' icon={makeup.src} />
+    <BentoItem categoryName='Vestimenta' icon={shirt.src} />
+    <BentoItem categoryName='Calzado' icon={shoes.src} />
+    <BentoItem categoryName='Hogar' icon={house.src} />
+    <BentoItem categoryName='Gaming' icon={gaming.src} />
+    <BentoItem categoryName='Accesorios' icon={ring.src} />
+    <BentoItem categoryName='Salud' icon={health.src} />
+  </div>
+</section>
