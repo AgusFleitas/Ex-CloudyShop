@@ -1,0 +1,44 @@
+---
+import logo from "../../public/favicon.png";
+---
+
+<header
+  id='navbar'
+  class='fixed left-1/2 -translate-x-1/2 flex mt-8 h-12 mx-auto justify-between items-center py-4 px-8 rounded-full bg-pink-200 z-20 w-[1400px] shadow-lg transition-all duration-[600ms]'
+>
+  <div class='flex'>
+    <a class='inline-flex justify-center items-center gap-2' href='#'>
+      <img class='h-8' src={logo.src} alt='Logo de CloudyShop' />
+      <span class='font-bold'>CloudyShop</span>
+    </a>
+  </div>
+
+  <nav class='flex gap-16 font-bold'>
+    <a class='hover:text-pink-500' href='#'>Categorías</a>
+    <a class='hover:text-pink-500' href='#'>Nosotros</a>
+    <a class='hover:text-pink-500' href='#'>Planes</a>
+    <a class='hover:text-pink-500' href='#'>Preguntas frecuentes</a>
+  </nav>
+</header>
+
+<script>
+  // Ocultar o mostrar la navbar dependiendo del scroll.
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("#navbar") as HTMLElement;
+    // Iniciamos una varibale en 2 para tener una referencia del último número de pixeles que se ha desplazado el scroll. Si la iniciamos en 0 la nav pega un salto.
+    let lastScrollTop = 2;
+
+    // Añadimos un evento que escuche el scroll.
+    window.addEventListener("scroll", () => {
+      // Obtenemos el número de scroll.
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        nav.style.top = "-100px";
+      } else {
+        nav.style.top = "0";
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  });
+</script>
