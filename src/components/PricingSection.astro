@@ -1,0 +1,59 @@
+---
+import PricingPlan from "./PricingPlan.astro";
+
+import wind from "../img/wind.webp";
+import storm from "../img/storm.webp";
+import hurricane from "../img/hurricane.webp";
+---
+
+<section class='flex flex-col justify-center mb-8'>
+  <h2 class='font-bold text-5xl text-center mb-2'>
+    Únete a nuestro Club Exclusivo
+  </h2>
+  <h3 class='font-regular text-lg text-center mb-12'>
+    Descubre los beneficios de ser miembro del Club CloudyShop y disfruta de
+    ventajas únicas que harán de tu experiencia de compra algo realmente
+    especial. Desde descuentos exclusivos hasta envíos prioritarios, tenemos el
+    plan perfecto para ti.
+  </h3>
+  <div class='flex justify-center gap-8'>
+    <PricingPlan
+    class="bg-teal-400/20"
+      icon={wind.src}
+      title='Brisa'
+      content={[
+        "5% de descuento en todas tus compras.",
+        "Envíos estándar gratuitos.",
+        "Acceso anticipado a ventas especiales.",
+      ]}
+      price='9.99'
+    />
+    <PricingPlan
+    class="bg-yellow-400/20"
+      icon={storm.src}
+      title='Tormenta'
+      content={[
+        "10% de descuento en todas tus compras.",
+        "Envíos estándar gratuitos.",
+        "Envíos prioritarios.",
+        "Acceso anticipado a ventas especiales.",
+        "Regalo sorpresa en tu cumpleaños.",
+      ]}
+      price='19.99'
+    />
+    <PricingPlan
+    class="bg-slate-800/30 "
+      icon={hurricane.src}
+      title='Huracán'
+      content={[
+        "15% de descuento en todas tus compras.",
+        "Envíos estándar y prioritarios gratuitos.",
+        "Acceso anticipado a ventas especiales.",
+        "Regalo sorpresa en tu cumpleaños.",
+        "Atención al cliente personalizada.",
+        "Participación en sorteos mensuales exclusivos.",
+      ]}
+      price='29.99'
+    />
+  </div>
+</section>
