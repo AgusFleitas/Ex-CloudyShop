@@ -1,0 +1,57 @@
+---
+import WhySection from "../components/WhySection.astro";
+
+import customersup from "../img/customerservice.webp";
+import discount from "../img/discount.webp";
+import refund from "../img/refund.webp";
+import security from "../img/security.webp";
+import shipping from "../img/shipping.webp";
+import gift from "../img/gift.webp";
+---
+
+<section>
+  <h2 class='font-bold text-5xl text-center mb-2'>
+    Por qué comprar en CloudyShop
+  </h2>
+  <h3 class='font-regular text-lg text-center mb-12'>
+    Te contamos algunas razones para querer elegir comprar con nosotros.
+  </h3>
+  <div class='flex flex-col gap-4'>
+    <WhySection
+      icon={shipping.src}
+      alt="Icono 3D de una moto que representa el envío del producto."
+      title='¡Envíos garantizados y rápidos!'
+      content='Nos comprometemos a entregarte tus productos de manera rápida y segura. Contamos con un sistema de seguimiento de envíos que te permitirá conocer el estado de tu pedido en todo momento. Si por alguna razón tu pedido no llega en el tiempo estimado, te ofrecemos una solución inmediata.'
+    />
+    <WhySection
+      icon={security.src}
+      alt="Icono 3D de un candado y un escudo que representa la seguridad de la web."
+      title='¡Tu seguridad es nuestra prioridad!'
+      content='En nuestra tienda, tu privacidad y seguridad son nuestra máxima prioridad. Utilizamos tecnología de encriptación avanzada para proteger tus datos personales y financieros, asegurando que tu información esté siempre segura y protegida. Compra con confianza sabiendo que tus datos están en buenas manos.'
+    />
+    <WhySection
+      icon={customersup.src}
+      alt="Icono 3D de un representante de atención al cliente."
+      title='¡Estamos aquí para ti, siempre!'
+      content='Nuestro equipo de atención al cliente está siempre disponible para ayudarte con cualquier duda o problema que puedas tener. Ya sea por teléfono, correo electrónico o chat en vivo, estamos aquí para brindarte la mejor asistencia posible y asegurar que tu experiencia de compra sea excepcional.'
+    />
+    <WhySection
+      icon={refund.src}
+      alt="Icono 3D de dinero con un símbolo de devolución."
+      title='¡Satisfacción garantizada o te devolvemos tu dinero!'
+      content='Queremos que te sientas completamente satisfecho con tu compra. Si no estás contento con algún producto, ofrecemos una política de devolución del dinero sin complicaciones. Simplemente devuélvenos el artículo en su estado original y te reembolsaremos tu dinero, sin hacer preguntas.'
+    />
+    <WhySection
+      icon={discount.src}
+      alt="Icono 3D de cupones de descuentos u ofertas."
+      title='¡Descuentos irresistibles en días especiales!'
+      content='¡Nos encanta consentir a nuestros clientes! Aprovecha nuestros increíbles descuentos y ofertas especiales en días festivos y eventos únicos. Ya sea Black Friday, Navidad o cualquier otra ocasión especial, siempre encontrarás grandes promociones que te ayudarán a ahorrar.'
+    />
+    <WhySection
+      icon={gift.src}
+      alt="Icono 3D de un regalo."
+      title='¡Te damos la bienvenida con un regalo especial!'
+      content='Para darte la bienvenida a nuestra tienda, te ofrecemos un descuento exclusivo en tu primera compra. Solo tienes que registrarte y recibirás un código de descuento que podrás usar de inmediato. ¡Es nuestra manera de agradecerte por elegirnos!'
+    />
+  </div>
+</section>
