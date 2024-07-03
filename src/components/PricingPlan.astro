@@ -7,7 +7,7 @@ const { icon, title, content, price} = Astro.props;
   flex flex-col justify-start items-center bg-pink-300/10 w-72 h-[36rem] rounded-lg py-6 px-6 hover:scale-[1.02] transition-transform cursor-pointer`}
 >
   <h4 class='text-2xl font-bold mb-4'>Plan {title}</h4>
-  <img class='w-32 mb-8' src={icon} alt='' />
+  <img loading="lazy" class='w-32 mb-8' src={icon} alt='' />
   <ul class='text-sm'>
     {content.map((benefit) => <li class='mb-3 text-pretty'>• {benefit}</li>)}
   </ul>
