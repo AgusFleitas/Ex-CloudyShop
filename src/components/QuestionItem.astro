@@ -1,0 +1,26 @@
+---
+const { question, answer } = Astro.props;
+---
+
+<article>
+  <details class='bg-white/60 rounded'>
+    <summary
+      class='bg-pink-200/60 p-4 text-xl font-semibold rounded-t-md cursor-pointer'
+    >
+      {question}
+    </summary>
+    <p class='py-4 px-12 rounded-b-md text-pretty'>{answer}</p>
+  </details>
+</article>
+
+<style>
+  summary {
+    list-style-image: url("../icons/arrow-right.svg");
+  }
+
+  details[open] {
+    summary {
+      list-style-image: url("../icons/arrow-down.svg");
+    }
+  }
+</style>
