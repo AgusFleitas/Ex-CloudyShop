@@ -1,34 +1,42 @@
 ---
 const { title } = Astro.props;
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 
 import Header from "../components/Header.astro";
 import ChatIcon from "../components/ChatIcon.astro";
-import Footer from '../components/Footer.astro';
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="CloudyShop es tu tienda online de confianza donde encontrarás una amplia variedad de productos a precios increíbles. Únete a nuestro Club Exclusivo para disfrutar de descuentos, envíos gratuitos, y mucho más. ¡Compra con seguridad y aprovecha nuestras ofertas especiales!" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="fixed top-0 -z-20 h-full w-full rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]" />
-		<Header />
-		<main class='w-screen md:max-w-6xl px-6 md:px-10 pt-20 md:pt-40 md:mx-auto flex flex-col gap-16 lg:gap-48'>
-			<slot />
-		</main>
-		<Footer />
-		<ChatIcon />
-	</body>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='CloudyShop es tu tienda online de confianza donde encontrarás una amplia variedad de productos a precios increíbles. Únete a nuestro Club Exclusivo para disfrutar de descuentos, envíos gratuitos, y mucho más. ¡Compra con seguridad y aprovecha nuestras ofertas especiales!'
+    />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.png' />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div
+      class='fixed top-0 -z-20 h-full w-full rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]'
+    >
+    </div>
+    <Header />
+    <main
+      class='w-screen md:max-w-6xl px-6 md:px-10 pt-20 md:pt-40 md:mx-auto flex flex-col gap-16 lg:gap-48'
+    >
+      <slot />
+    </main>
+    <Footer />
+    <ChatIcon />
+  </body>
 </html>
 <style is:global>
-	html {
-		font-family: 'Onest Variable', system-ui, sans-serif;
-	}
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
 </style>
-
