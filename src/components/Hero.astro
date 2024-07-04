@@ -30,8 +30,14 @@ import tools from "../img/tools.webp";
         alt=''
       />
     </div>
-    <h1 class='col-span-3 font-bold text-center text-9xl'>CloudyShop</h1>
-    <h3 class='col-span-3 font-semibold text-center text-2xl'>
+    <h1
+      class='col-span-3 font-bold text-center text-5xl md:text-8xl lg:text-9xl'
+    >
+      CloudyShop
+    </h1>
+    <h3
+      class='col-span-3 font-semibold text-center text-balance text-sm md:text-xl lg:text-2xl'
+    >
       Una tienda con productos hasta por las nubes
     </h3>
     <a
@@ -45,14 +51,14 @@ import tools from "../img/tools.webp";
         alt=''
       />
     </div>
-    <div class='translate-x-4 translate-y-8 rotate-6 scale-125'>
+    <div class='translate-x-2 translate-y-4 md:translate-x-4 md:translate-y-8 rotate-6 scale-125'>
       <img
         class='hover:scale-110 transition-transform hover:rotate-3'
         src={shoe.src}
         alt=''
       />
     </div>
-    <div class='translate-x-2 translate-y-4 scale-110 rotate-3'>
+    <div class='translate-x-2 translate-y-4 scale-110 rotate-6'>
       <img
         class='hover:scale-110 transition-transform hover:-rotate-3'
         src={tools.src}
@@ -66,16 +72,16 @@ import tools from "../img/tools.webp";
   .grid-custom {
     display: grid;
     grid-template-rows: auto;
+  }
 
-    div {
-      display: flex;
+  .grid-custom div {
+    display: flex;
       justify-content: center;
       align-items: center;
-    }
+  }
 
-    img {
-      width: 100px;
-    }
+  .grid-custom img {
+    width: 100px;
   }
 
   .grid-custom div {
@@ -85,6 +91,18 @@ import tools from "../img/tools.webp";
   @keyframes floating {
     to {
       transform: initial;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-custom img {
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .grid-custom img {
+      width: 80px;
     }
   }
 </style>
