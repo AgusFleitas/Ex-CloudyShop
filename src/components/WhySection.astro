@@ -3,9 +3,9 @@ const { icon, title, content, alt } = Astro.props
 ---
 
 <article class="flex flex-col bg-white rounded-xl py-4 gap-y-4">
-        <h4 class="font-semibold text-2xl text-center bg-pink-300/20 mx-4 py-2 rounded-lg">{title}</h4>
-    <div class="flex px-12 items-center justify-center gap-8 py-4 mx-4 rounded-lg">
+        <h4 class="font-semibold text sm:text-2xl text-center text-balance bg-pink-300/20 mx-4 p-2 rounded-lg">{title}</h4>
+    <div class="flex flex-col md:flex-row md:px-6 lg:px-12 items-center justify-center gap-8 py-4 mx-4 rounded-lg">
         <img loading="lazy" class="h-48" src={icon} alt={alt}>
-        <p class="px-4 text-pretty text-lg ">{content}</p>
+        <p class="px-4 text-pretty md:text-lg">{content}</p>
     </div>
 </article>
