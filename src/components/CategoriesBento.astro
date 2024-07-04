@@ -13,11 +13,11 @@ import toy from "../img/toy-icon.webp";
 ---
 
 <section>
-  <h2 class='font-bold text-5xl text-center mb-2'>
+  <h2 class='font-bold text-[1.35rem] sm:text-3xl md:text-4xl lg:text-5xl text-center  mb-1 md:mb-2 text-balance'>
     Explora nuestras categorías
   </h2>
-  <h3 class="font-regular text-lg text-center mb-8">Navega por cada una de las categorías en busca de eso que necesitas</h3>
-  <div class='grid grid-cols-3 mx-auto auto-rows-[4rem] gap-8 max-w-[750px]'>
+  <h3 class="font-regular text-sm md:text-lg text-center mb-8 text-balance">Navega por cada una de las categorías en busca de eso que necesitas</h3>
+  <div class='grid auto-cols-[16rem] justify-center sm:grid-cols-3 mx-auto auto-rows-[4rem] gap-4 sm:gap-8 max-w-[750px]'>
     <BentoItem categoryName='Juguetes' icon={toy.src} />
     <BentoItem categoryName='Tecnología' icon={laptop.src} />
     <BentoItem categoryName='Maquillaje' icon={makeup.src} />
