@@ -5,11 +5,11 @@ const { question, answer } = Astro.props;
 <article>
   <details class='bg-white/60 rounded'>
     <summary
-      class='bg-pink-200/60 p-4 text-xl font-semibold rounded-t-md cursor-pointer'
+      class='bg-pink-200/60 p-3 md:p-4 md:text-xl font-semibold rounded-t-md cursor-pointer'
     >
       {question}
     </summary>
-    <p class='py-4 px-12 rounded-b-md text-pretty'>{answer}</p>
+    <p class='py-4 px-8 text-sm md:text-base md:px-12 rounded-b-md text-pretty'>{answer}</p>
   </details>
 </article>
 
@@ -18,9 +18,7 @@ const { question, answer } = Astro.props;
     list-style-image: url("../icons/arrow-right.svg");
   }
 
-  details[open] {
-    summary {
+  details[open] summary {
       list-style-image: url("../icons/arrow-down.svg");
     }
-  }
 </style>
